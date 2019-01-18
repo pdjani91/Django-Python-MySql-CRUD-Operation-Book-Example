@@ -1,4 +1,4 @@
-# Simple-CRUD-Django
+# Simple-CRUD-Django-MySql
 This is a simple Django project to demonstrate Django CRUD functionality.
 
 # Required Install Packages
