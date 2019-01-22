@@ -13,6 +13,6 @@ Download from this link : https://bit.ly/2FNn3e5
 # Recommended
 Make sure that all required packages should be installed in your virtual environment.
 
-#Credit :
+# Credit :
 Vitor Freitas
 https://simpleisbetterthancomplex.com/
