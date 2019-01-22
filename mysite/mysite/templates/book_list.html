@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% block content_header %}
+
+{% if messages %}
+	<ul class="messages">
+		{% for msg in messages %}
+		
+			<div class="alert alert-success - {{msg.level_tag}}" role="alert">
+				{{msg.message}}				
+			</div>
+		
+		{% endfor %}
+	</ul>
+{% endif %}
+
+<h2>Books</h2>
+<p>
+	<a href="{% url 'upload_book' %}" class="btn btn-primary">Upload Books</a>
+</p>
+{% endblock %}
+
+<table class="table table-bordered">
+	<thead>
+		<tr>
+			<th>Cover</th>
+			<th>Titile</th>
+			<th>Author</th>
+			<th>Download</th>
+			<th>Delete</th>
+		</tr>
+	</thead>
+	<tbody>
+		{% for book in books %}
+			<tr>
+				<td>
+					{% if book.cover %}
+						<img src="{{book.cover.url}}" alt="{{book.title}}" style="width: 100px;">
+					{% else %}
+						<span class="text-muted">No Cover</span>
+					{% endif %}
+				</td>
+				<td>{{book.title}}</td>
+				<td>{{book.author}}</td>
+				<td>
+					<a href="{{book.pdf.url}}" target="_blank" class="btn btn-primary btn-sm">Download PDF</a>
+				</td>
+				<td>
+					<form method="post" action="{% url 'delete_book' book.pk %}">
+						{% csrf_token %}
+						<button type="submit" class="btn btn-danger btn-sm">Delete</button>
+					</form>
+				</td>
+			</tr>
+		{% endfor %}
+	</tbody>
+</table>
+
+
+{% endblock %}

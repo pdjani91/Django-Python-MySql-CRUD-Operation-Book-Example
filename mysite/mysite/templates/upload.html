@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+
+{% if user.is_authenticated %}
+	<h2>Upload</h2>
+	<form method="post" enctype="multipart/form-data">
+		{% csrf_token %}
+		<input type="file" name="document">
+		<button type="submit">Upload File</button>
+	</form>
+	{% if url %}
+		<p>Uploaded File : <a href="{{url}}">{{url}}</a></p>
+	{% endif %}
+{% endif %}
+{% endblock %}
