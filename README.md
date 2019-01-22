@@ -7,5 +7,7 @@ For Windows : pip install mysql-connector
 
 For Ubuntu /Linux : sudo apt-get install python3-pymysql
 
+pip install mysqlclient-1.3.13-cp37-cp37m-win32.whl
+
 # Recommended
-Make sure that all packages should be installed in your virtual environment.
+Make sure that all required packages should be installed in your virtual environment.
