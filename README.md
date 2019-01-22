@@ -1,4 +1,4 @@
-# Simple-CRUD-Django-MySql
+# Simple-CRUD-Python-Django-MySql
 This is a simple Django project to demonstrate Django CRUD functionality.
 
 # Required Install Packages
@@ -12,3 +12,7 @@ Download from this link : https://bit.ly/2FNn3e5
 
 # Recommended
 Make sure that all required packages should be installed in your virtual environment.
+
+#Credit :
+Vitor Freitas
+https://simpleisbetterthancomplex.com/
