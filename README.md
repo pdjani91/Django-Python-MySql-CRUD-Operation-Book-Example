@@ -14,5 +14,5 @@ Download from this link : https://bit.ly/2FNn3e5
 Make sure that all required packages should be installed in your virtual environment.
 
 # Credit & Reference :
-Vitor Freitas
+Mr.Vitor Freitas
 https://simpleisbetterthancomplex.com/
